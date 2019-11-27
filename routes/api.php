@@ -34,5 +34,3 @@ Route::prefix('attraction')->group(function(){
     Route::post('updateAttraction', 'ControllerAttraction@modifierAttraction');
 });
 
-Route::post('dsdsd', 'ControllerAttraction@modifierAttraction');
-Route::post('dsqfsjdhusdiqsjodiq', 'ControllerAttraction@modifierAttraction');
