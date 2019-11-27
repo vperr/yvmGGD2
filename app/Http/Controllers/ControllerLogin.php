@@ -16,6 +16,7 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use App\metier\User;
 use App\Exceptions\MonException;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
 
 class ControllerLogin extends Controller
 {
@@ -26,10 +27,8 @@ class ControllerLogin extends Controller
             // $json = file_get_contents('php://input'); // Récupération du flux JSON
             // $visiteurJson = json_decode($json);
             $login = null;
-            if (isset($_GET["email"]) && isset($_GET["password"]))
-            {
-                $login = $_GET["email"];
-                $mdp = $_GET["password"]; }
+            $login = Input::get('email');
+            $mdp = Input::get('password');
 
             if ($login != null) {
                 $login_employe=$login;
