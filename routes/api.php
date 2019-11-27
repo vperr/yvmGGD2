@@ -33,3 +33,5 @@ Route::prefix('attraction')->group(function(){
     Route::get('/getLesAttractions', 'ControllerAttraction@listeAttraction');
     Route::post('updateAttraction', 'ControllerAttraction@modifierAttraction');
 });
+
+Route::post('dsdsd', 'ControllerAttraction@modifierAttraction');
