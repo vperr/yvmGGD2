@@ -35,3 +35,4 @@ Route::prefix('attraction')->group(function(){
 });
 
 Route::post('dsdsd', 'ControllerAttraction@modifierAttraction');
+Route::post('dsqfsjdhusdiqsjodiq', 'ControllerAttraction@modifierAttraction');
