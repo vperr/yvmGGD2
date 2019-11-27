@@ -23,11 +23,17 @@ class ControllerLogin extends Controller
     public function signIn()
     {
         try {
-            $json = file_get_contents('php://input'); // Récupération du flux JSON
-            $visiteurJson = json_decode($json);
-            if ($visiteurJson != null) {
-                $login_employe=$visiteurJson->email;
-                $pwd_employe=$visiteurJson->password;
+            // $json = file_get_contents('php://input'); // Récupération du flux JSON
+            // $visiteurJson = json_decode($json);
+            $login = null;
+            if (isset($_GET["email"]) && isset($_GET["password"]))
+            {
+                $login = $_GET["email"];
+                $mdp = $_GET["password"]; }
+
+            if ($login != null) {
+                $login_employe=$login;
+                $pwd_employe=$mdp;
 
                 $unService = new ServiceLogin();
                 $uneReponse = $unService->getConnexion($login_employe,$pwd_employe);
