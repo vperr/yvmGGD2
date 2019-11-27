@@ -21,16 +21,16 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 
 
-Route::post('/getConnexion', 'ControllerLogin@signIn');
+Route::post('/getConnexion', 'ControllerLogin@signIn')->middleware('cors');
 
 Route::prefix('employes')->group(function(){
-    Route::get('/getListeEmploye', 'ControllerEmploye@getListeEmploye');
-    Route::get('/getListeEmployeFonction/{id}', 'ControllerEmploye@listeEmployeAttraction');
+    Route::get('/getListeEmploye', 'ControllerEmploye@getListeEmploye')->middleware('cors');
+    Route::get('/getListeEmployeFonction/{id}', 'ControllerEmploye@listeEmployeAttraction')->middleware('cors');
     Route::post('addEmploye', 'ControllerEmploye@ajoutEmploye');
 });
 
 Route::prefix('attraction')->group(function(){
-    Route::get('/getLesAttractions', 'ControllerAttraction@listeAttraction');
+    Route::get('/getLesAttractions', 'ControllerAttraction@listeAttraction')->middleware('cors');
     Route::post('updateAttraction', 'ControllerAttraction@modifierAttraction');
 });
 
