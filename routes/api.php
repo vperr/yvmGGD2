@@ -21,7 +21,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 
 
-Route::post('/getConnexion/{email}/{password}', 'ControllerLogin@signIn');
+Route::post('/getConnexion', 'ControllerLogin@signIn');
 
 Route::prefix('employes')->group(function(){
     Route::get('/getListeEmploye', 'ControllerEmploye@getListeEmploye')->middleware('cors');

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="246fcca2-e62c-435c-9480-6ecc5998c010" name="Default" comment="Ajout cors">
+      <change afterPath="$PROJECT_DIR$/app/metier/UserT.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ControllerLogin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ControllerLogin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
@@ -108,7 +109,7 @@
   <component name="PropertiesComponent">
     <property name="Constants" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ProjetWSGsb" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -168,6 +169,7 @@
       <workItem from="1574686877594" duration="12784000" />
       <workItem from="1574860306450" duration="3418000" />
       <workItem from="1574867327790" duration="3240000" />
+      <workItem from="1575357180947" duration="3759000" />
     </task>
     <task id="LOCAL-00001" summary="Test Git 1">
       <created>1574867417142</created>
