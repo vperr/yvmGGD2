@@ -4,7 +4,7 @@
 namespace App\metier;
 
 
-class UserT
+class UserT implements \JsonSerializable
 {
     private $ID;
     private $NAME;
@@ -108,6 +108,12 @@ class UserT
         $this->USER_UPDATE = $USER_UPDATE;
     }
    private $USER_UPDATE;
+
+    public function jsonSerialize()
+    {
+        return get_object_vars($this);
+    }
 }
+
 
 
