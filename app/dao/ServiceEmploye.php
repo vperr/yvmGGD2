@@ -20,8 +20,7 @@ class ServiceEmploye
     {
         try {
         $response = DB::table('PERSONNEL')
-            ->select('matricule', 'nom', 'prenom', 'tel', 'libelleFonc')
-            ->join('FONCTION', 'FONCTION.codeFonc', '=', 'PERSONNEL.codeFonc')
+            ->select('matricule', 'nom', 'prenom', 'tel', 'codeFonc')
             ->orderBy('matricule')
             ->get();
         return $response;

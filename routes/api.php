@@ -24,7 +24,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::post('/getConnexion', 'ControllerLogin@signIn');
 
 Route::prefix('employes')->group(function(){
-    Route::get('/getListeEmploye', 'ControllerEmploye@getListeEmploye')->middleware('cors');
+    Route::get('/getListeEmploye', 'ControllerEmploye@getListeEmploye');
     Route::get('/getListeEmployeFonction/{id}', 'ControllerEmploye@listeEmployeAttraction')->middleware('cors');
     Route::post('addEmploye', 'ControllerEmploye@ajoutEmploye');
 });

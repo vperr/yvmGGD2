@@ -8,6 +8,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Modele\EmployeT;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -23,7 +24,17 @@ class ControllerEmploye extends Controller
         try {
             $unEmploye = new ServiceEmploye();
             $response = $unEmploye->getListePersonnel();
-            return json_encode($response);
+            if (isset ($response)){
+                foreach ($response as $unP){
+                    $unEmployeT = new EmployeT();
+                    $unEmployeT->setMATRICULE($unP->MATRICULE);
+                    $unEmployeT->setNOM($unP->NOM);
+                    $unEmployeT->setPRENOM($unP->PRENOM);
+                    $unEmployeT->setTEL($unP->TEL);
+                    $unEmployeT->setCODEFONC($unP->CODEFONC);
+                    return Reponse()->json($unEmployeT);
+                }
+            }
         } catch (MonException $e) {
             $erreur = $e->getMessage();
             return response()->json($erreur, 204);
