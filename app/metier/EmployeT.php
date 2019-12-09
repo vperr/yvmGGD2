@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Modele;
+namespace App\metier;
 
 class EmployeT implements \JsonSerializable
 {
@@ -8,6 +8,7 @@ class EmployeT implements \JsonSerializable
     private $NOM;
     private $PRENOM;
     private $TEL;
+    private $CODEFONC;
 
     /**
      * @return mixed
@@ -88,7 +89,6 @@ class EmployeT implements \JsonSerializable
     {
         $this->CODEFONC = $CODEFONC;
     }
-    private $CODEFONC;
 
     public function jsonSerialize()
     {

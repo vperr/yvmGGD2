@@ -6,7 +6,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ControllerEmploye.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ControllerEmploye.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/dao/ServiceEmploye.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/dao/ServiceEmploye.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/metier/EmployeT.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/metier/EmployeT.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -110,22 +110,22 @@
   <component name="PropertiesComponent">
     <property name="Constants" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../vperr/laravel/ProjetCerisaie" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\relave\yvmGGD\app\Http\Controllers" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\relave\yvmGGD" />
       <recent name="C:\xampp\htdocs\relave\yvmGGD\app\metier" />
       <recent name="C:\xampp\htdocs\relave\yvmGGD\app\dao" />
       <recent name="C:\xampp\htdocs\relave\yvmGGD\app\Http\Middleware" />
       <recent name="C:\xampp\htdocs\relave\yvmGGD\app\Exceptions" />
+      <recent name="C:\xampp\htdocs\relave\yvmGGD\app\Http\Controllers\Auth" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\relave\yvmGGD\app\Http\Controllers" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -171,11 +171,8 @@
       <workItem from="1574860306450" duration="3418000" />
       <workItem from="1574867327790" duration="3240000" />
       <workItem from="1575357180947" duration="3759000" />
-      <workItem from="1575486194375" duration="1706000" />
-      <workItem from="1575536940626" duration="2735000" />
-      <workItem from="1575565184019" duration="1331000" />
-      <workItem from="1575709865507" duration="5846000" />
-      <workItem from="1575797650550" duration="311000" />
+      <workItem from="1575468257361" duration="1700000" />
+      <workItem from="1575877689578" duration="5711000" />
     </task>
     <task id="LOCAL-00001" summary="Test Git 1">
       <created>1574867417142</created>
@@ -225,13 +222,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/Http/Controllers/ControllerLogin.php</url>
-          <line>40</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
       <default-breakpoints>
         <breakpoint suspend="NONE" type="javascript-exception" />
       </default-breakpoints>
