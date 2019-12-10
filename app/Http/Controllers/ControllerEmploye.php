@@ -64,4 +64,24 @@ class ControllerEmploye extends Controller
             return response()->json($erreur, 201);
         }
     }
+
+    public function modifEmploye(){
+        try {
+            $json = file_get_contents('php://input'); // Récupération du flux JSON
+            $employeJson = json_decode($json);
+            if ($employeJson != null) {
+                $mat = $employeJson->matricule;
+                $nom = $employeJson->nom;
+                $pren = $employeJson->prenom;
+                $tel = $employeJson->tel;
+                $codeF = $employeJson->codeFonc;
+                $unService = new ServiceEmploye();
+                $uneReponse = $unService->updateEmploye($mat, $nom, $pren, $tel, $codeF);
+                return response()->json($uneReponse);
+            }
+        } catch(MonException $e) {
+            $erreur = $e->getMessage();
+            return response()->json($erreur, 201);
+        }
+    }
 }
