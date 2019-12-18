@@ -59,4 +59,58 @@ class ServiceEmploye
             throw new MonException($e->getMessage(), 5);
         }
     }
+
+    public function updateEmploye($mat, $nom, $pren, $tel, $codeF)
+    {
+        try {
+            DB::table('PERSONNEL')->where('matricule', '=', $mat)
+                ->update(['nom' => $nom, 'prenom' => $pren,
+                    'tel' => $tel,
+                    'codeFonc' => $codeF,
+                ]);
+            $response = array(
+                'status_message' => 'Modification réalisée'
+            );
+            return $response;
+        } catch (QueryException $e) {
+            throw new MonException($e->getMessage(), 5);
+        }
+    }
+
+    public function getListeFonction(){
+        try {
+            $response = DB::table('FONCTION')
+                ->select('codeFonc', 'libelleFonc')
+                ->get();
+            return $response;
+        } catch (QueryException $e) {
+            throw new MonException($e->getMessage());
+        }
+    }
+
+    public function getPersonnelById($mat){
+        try {
+            $response = DB::table('PERSONNEL')
+                ->select('matricule', 'nom', 'prenom', 'tel', 'codefonc')
+                ->where('matricule', '=', $mat)
+                ->get();
+            return $response;
+        } catch (QueryException $e) {
+            throw new MonException($e->getMessage());
+        }
+    }
+
+    /**
+     * Suppression d'un employe
+     * @param type $mat : Id d'un employé à supprimer
+     **/
+    public function deleteEmploye($mat){
+        try {
+            DB::table('PERSONNEL')->where('matricule', '=', $mat)->delete();
+
+            return true;
+        } catch (QueryException $e) {
+            throw new MonException($e->getMessage(), 5);
+        }
+    }
 }

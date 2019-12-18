@@ -70,11 +70,11 @@ class ControllerEmploye extends Controller
             $json = file_get_contents('php://input'); // Récupération du flux JSON
             $employeJson = json_decode($json);
             if ($employeJson != null) {
-                $mat = $employeJson->matricule;
-                $nom = $employeJson->nom;
-                $pren = $employeJson->prenom;
-                $tel = $employeJson->tel;
-                $codeF = $employeJson->codeFonc;
+                $mat = $employeJson->MATRICULE;
+                $nom = $employeJson->NOM;
+                $pren = $employeJson->PRENOM;
+                $tel = $employeJson->TEL;
+                $codeF = $employeJson->CODEFONC;
                 $unService = new ServiceEmploye();
                 $uneReponse = $unService->updateEmploye($mat, $nom, $pren, $tel, $codeF);
                 return response()->json($uneReponse);
@@ -84,4 +84,45 @@ class ControllerEmploye extends Controller
             return response()->json($erreur, 201);
         }
     }
+
+    public function getListeFonction(){
+        try {
+            $unEmploye = new ServiceEmploye();
+            $response = $unEmploye->getListeFonction();
+            if (isset ($response)){
+                return json_encode($response);
+
+            }
+        } catch (MonException $e) {
+            $erreur = $e->getMessage();
+            return response()->json($erreur, 204);
+        }
+    }
+
+    public function getUnEmploye($mat){
+        try {
+            $unEmploye = new ServiceEmploye();
+            $response = $unEmploye->getPersonnelById($mat);
+            if (isset ($response)){
+                return json_encode($response);
+
+            }
+        } catch (MonException $e) {
+            $erreur = $e->getMessage();
+            return response()->json($erreur, 204);
+        }
+    }
+
+    public function supprEmploye($mat)
+    {
+        try {
+            $unService = new ServiceEmploye();
+            $uneReponse = $unService->deleteEmploye($mat);
+            return json_encode($uneReponse);
+        } catch (MonException $e) {
+            $erreur = $e->getMessage();
+            return $erreur;
+        }
+    }
+
 }

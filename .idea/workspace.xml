@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="246fcca2-e62c-435c-9480-6ecc5998c010" name="Default" comment="Ajout cors">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+    <list default="true" id="246fcca2-e62c-435c-9480-6ecc5998c010" name="Default" comment="Connexion">
+      <change afterPath="$PROJECT_DIR$/app/metier/Fonction.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ControllerEmploye.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ControllerEmploye.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/dao/ServiceEmploye.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/dao/ServiceEmploye.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/metier/EmployeT.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/metier/EmployeT.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dao/ServiceLogin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/dao/ServiceLogin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -110,7 +111,7 @@
   <component name="PropertiesComponent">
     <property name="Constants" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../vperr/laravel/ProjetCerisaie" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -173,6 +174,16 @@
       <workItem from="1575357180947" duration="3759000" />
       <workItem from="1575468257361" duration="1700000" />
       <workItem from="1575877689578" duration="5711000" />
+      <workItem from="1575969172838" duration="5304000" />
+      <workItem from="1576482846576" duration="2274000" />
+      <workItem from="1576493522072" duration="755000" />
+      <workItem from="1576566017046" duration="2088000" />
+      <workItem from="1576570412974" duration="21000" />
+      <workItem from="1576570439853" duration="1568000" />
+      <workItem from="1576573051273" duration="1230000" />
+      <workItem from="1576578017630" duration="3776000" />
+      <workItem from="1576584484532" duration="659000" />
+      <workItem from="1576657799525" duration="213000" />
     </task>
     <task id="LOCAL-00001" summary="Test Git 1">
       <created>1574867417142</created>
@@ -195,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574868932451</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Modif employe">
+      <created>1575967836041</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1575967836041</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,10 +236,18 @@
     <MESSAGE value="Test Git 1" />
     <MESSAGE value="Vrai démarrage" />
     <MESSAGE value="Ajout cors" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajout cors" />
+    <MESSAGE value="Modif employe" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modif employe" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/ControllerEmploye.php</url>
+          <line>69</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
       <default-breakpoints>
         <breakpoint suspend="NONE" type="javascript-exception" />
       </default-breakpoints>

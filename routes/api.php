@@ -25,9 +25,12 @@ Route::post('/getConnexion', 'ControllerLogin@signIn');
 
 Route::prefix('employes')->group(function(){
     Route::get('/getListeEmploye', 'ControllerEmploye@getListeEmploye');
+    Route::get('/getUnEmploye/{id}', 'ControllerEmploye@getUnEmploye');
+    Route::get('/getListeFonction', 'ControllerEmploye@getListeFonction');
     Route::get('/getListeEmployeFonction/{id}', 'ControllerEmploye@listeEmployeAttraction');
     Route::post('addEmploye', 'ControllerEmploye@ajoutEmploye');
     Route::post('updateEmploye', 'ControllerEmploye@modifEmploye');
+    Route::get('supprimEmploye/{mat}', 'ControllerEmploye@supprEmploye');
 });
 
 Route::prefix('attraction')->group(function(){

@@ -32,7 +32,7 @@ class ServiceLogin
                     ->first();
                 if ($visiteur != null) {
                     if (Hash::check($visiteur->PASSWORD, $pwd_visiteur )) {
-                        $response =null;
+                        $response = null;
                     } else
                         $response =  $visiteur;
                 } else
